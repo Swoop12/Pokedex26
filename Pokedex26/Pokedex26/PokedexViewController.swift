@@ -18,7 +18,16 @@ class PokedexViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        PokemonController.fetchPokemonWith(name: "charizard") { (pokemon) in
+            DispatchQueue.main.async {
+                print(pokemon)
+                self.nameLabel.text = pokemon?.name
+                self.idLabel.text = "\(pokemon?.id ?? 0)"
+                self.weightLabel.text = "\(pokemon?.weight ?? 0)"
+            }
+        }
+        
     }
 
 

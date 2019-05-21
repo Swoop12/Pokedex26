@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TRAPokemonController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    TRAPokemonController *controller = [[TRAPokemonController alloc] init];
+    [controller fetchPokemonWithName:@"bulbasaur" completion:^(TRAPokemon * _Nullable pokemon){
+        
+    }];
+    
     return YES;
 }
 

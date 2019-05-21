@@ -12,6 +12,8 @@
 		F7CB80C5229451F10020341A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CB80C3229451F10020341A /* LaunchScreen.storyboard */; };
 		F7CB80C8229451F10020341A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CB80C7229451F10020341A /* main.m */; };
 		F7CB80CF2294526C0020341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CB80CE2294526C0020341A /* Assets.xcassets */; };
+		F7CB80D6229460DD0020341A /* TRAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CB80D5229460DD0020341A /* TRAPokemon.m */; };
+		F7CB80DB229467260020341A /* TRAPokemonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CB80DA229467260020341A /* TRAPokemonController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		F7CB80C6229451F10020341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CB80C7229451F10020341A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7CB80CE2294526C0020341A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CB80D4229460DD0020341A /* TRAPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAPokemon.h; sourceTree = "<group>"; };
+		F7CB80D5229460DD0020341A /* TRAPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAPokemon.m; sourceTree = "<group>"; };
+		F7CB80D9229467260020341A /* TRAPokemonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAPokemonController.h; sourceTree = "<group>"; };
+		F7CB80DA229467260020341A /* TRAPokemonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAPokemonController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				F7CB80CE2294526C0020341A /* Assets.xcassets */,
 				F7CB80C6229451F10020341A /* Info.plist */,
 				F7CB80C7229451F10020341A /* main.m */,
+				F7CB80D4229460DD0020341A /* TRAPokemon.h */,
+				F7CB80D5229460DD0020341A /* TRAPokemon.m */,
+				F7CB80D9229467260020341A /* TRAPokemonController.h */,
+				F7CB80DA229467260020341A /* TRAPokemonController.m */,
 			);
 			path = Pokedex26ObjC;
 			sourceTree = "<group>";
@@ -137,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7CB80C8229451F10020341A /* main.m in Sources */,
+				F7CB80DB229467260020341A /* TRAPokemonController.m in Sources */,
+				F7CB80D6229460DD0020341A /* TRAPokemon.m in Sources */,
 				F7CB80BA229451F00020341A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
