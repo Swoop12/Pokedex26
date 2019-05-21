@@ -17,12 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    TRAPokemonController *controller = [[TRAPokemonController alloc] init];
-    [controller fetchPokemonWithName:@"bulbasaur" completion:^(TRAPokemon * _Nullable pokemon){
-        
-    }];
-    
     return YES;
 }
 

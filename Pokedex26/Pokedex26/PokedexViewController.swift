@@ -20,14 +20,24 @@ class PokedexViewController: UIViewController {
         super.viewDidLoad()
         
         PokemonController.fetchPokemonWith(name: "charizard") { (pokemon) in
+            if let imageUrl = pokemon?.imageUrl {
+                self.fetchAndSetImageFor(url: imageUrl)
+            }
             DispatchQueue.main.async {
-                print(pokemon)
                 self.nameLabel.text = pokemon?.name
                 self.idLabel.text = "\(pokemon?.id ?? 0)"
                 self.weightLabel.text = "\(pokemon?.weight ?? 0)"
             }
         }
         
+    }
+    
+    func fetchAndSetImageFor(url: String) {
+        PokemonController.fetchImageAt(urlString: url) { (image) in
+            DispatchQueue.main.async {
+                self.pokeImageView.image = image
+            }
+        }
     }
 
 

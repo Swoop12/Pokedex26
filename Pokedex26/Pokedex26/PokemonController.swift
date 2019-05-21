@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PokemonController {
     
@@ -38,4 +39,21 @@ class PokemonController {
         }.resume()
     }
     
+    static func fetchImageAt(urlString: String, completion: @escaping (UIImage?) -> Void) {
+        //1) Build the URL
+        guard let url = URL(string: urlString) else { completion(nil) ; return }
+        print(url.absoluteString)
+        
+        //2) Datatask & Complete
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            if let error = error{
+                print("\(error.localizedDescription) \(error) in function: \(#function)")
+                completion(nil)
+                return
+            }
+            guard let data = data else { completion(nil) ; return }
+            let pokeImage = UIImage(data: data)
+            completion(pokeImage)
+        }.resume()
+    }
 }
